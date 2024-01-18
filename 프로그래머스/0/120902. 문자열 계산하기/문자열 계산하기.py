@@ -1,7 +1,7 @@
-def solution2(my_string):
+def solution3(my_string):
     return eval(my_string)
 
-def solution(my_string):
+def solution2(my_string):
     box = []
     num = []
     
@@ -18,4 +18,15 @@ def solution(my_string):
             ans += num.pop(0)
         else:
             ans -= num.pop(0)
+    return ans
+
+def solution(my_string):
+    box = my_string.split(" ")
+    ans = int(box[0])
+    
+    for i in range(1, len(box),2):
+        if box[i] == "-":
+            ans -= int(box[i+1])
+        else:
+            ans += int(box[i+1])
     return ans
