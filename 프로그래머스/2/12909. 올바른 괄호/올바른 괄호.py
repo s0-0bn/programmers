@@ -13,5 +13,4 @@ def solution(s):
                 return False
     if stk:
         return False
-    else:
-        return True
+    return True
