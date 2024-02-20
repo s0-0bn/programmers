@@ -2,12 +2,11 @@ def solution(chicken):
     answer = 0
     mod = 0
     
-    while mod+chicken>=10:
+    while chicken>=10:
         answer+=chicken//10
         mod = chicken%10
         
         chicken = mod+(chicken//10)
-        mod=0
     return answer
 
 
