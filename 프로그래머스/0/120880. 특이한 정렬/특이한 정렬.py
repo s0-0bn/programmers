@@ -1,4 +1,4 @@
-def solution(numlist, n):
+def solution2(numlist, n):
     answer = []
     numlist.sort(reverse=True)
     box = [abs(i-n) for i in numlist]
@@ -10,3 +10,6 @@ def solution(numlist, n):
         numlist.pop(value)
 
     return answer
+
+def solution(numlist, n):
+    return sorted(numlist,key = lambda x: [abs(x-n),-x])
