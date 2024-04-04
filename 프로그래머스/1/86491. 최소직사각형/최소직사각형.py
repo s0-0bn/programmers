@@ -1,4 +1,4 @@
-def solution(sizes):
+def solution2(sizes):
     for i in sizes:
         i.sort()
     
@@ -11,3 +11,13 @@ def solution(sizes):
         if h > mh:
             mh = h
     return mw*mh
+
+def solution(sizes):
+    row = 0
+    col = 0
+    for a, b in sizes:
+        if a < b:
+            a, b = b, a
+        row = max(row, a)
+        col = max(col, b)
+    return row * col
