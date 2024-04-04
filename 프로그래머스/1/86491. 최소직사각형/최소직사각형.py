@@ -1,18 +1,15 @@
-def solution2(sizes):
+def solution(sizes):
     for i in sizes:
         i.sort()
+        
+    mw, mh = 0,0
     
-    mw = sizes[0][0]
-    mh = sizes[0][1]
-    
-    for w,h in sizes[1:]:
-        if w > mw:
-            mw = w
-        if h > mh:
-            mh = h
+    for w,h in sizes:
+        mw = max(mw,w)
+        mh = max(mh,h)
     return mw*mh
 
-def solution(sizes):
+def solution2(sizes):
     row = 0
     col = 0
     for a, b in sizes:
