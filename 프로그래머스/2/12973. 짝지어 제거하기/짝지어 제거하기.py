@@ -1,13 +1,13 @@
 def solution(s):
     box = []
     for i in s:
-        if box==[]:
+        if len(box)==0:
             box.append(i)
         else:
-            if box[len(box)-1] == i:
+            if box[-1] == i:
                 box.pop()
             else:
                 box.append(i)
-    if box == []:
+    if len(box) == 0:
         return 1
     return 0
